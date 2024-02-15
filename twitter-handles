@@ -1,0 +1,11 @@
+import re
+
+api_response = """
+
+Twitter Handles: "@user123", "@another_user"
+"""
+
+twitter_handle_pattern = r'"@([a-zA-Z0-9]+)"'
+twitter_handles = re.findall(twitter_handle_pattern, api_response)
+
+print("Twitter Handles:", twitter_handles)
